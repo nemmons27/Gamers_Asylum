@@ -9,7 +9,7 @@
 ***
 ***
 
-#### [**GitHub**]()
+#### [**GitHub**](https://github.com/nemmons27/Gamers_Asylum)
 #### [**Trello Board**](https://trello.com/b/20Wf3b0N/gamers-asylum)
 
 ***
