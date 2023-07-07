@@ -1,7 +1,7 @@
 ## **Gamers Asylum**
 #### _Every Gamers new favorite safe space_
 
-![Image](StrawhatsTogether)
+![Image][StrawhatsTogether]
 
 #### Written by ***Nicholas Emmons***
 #### Published By ***Gamers Asylum***
@@ -33,3 +33,6 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [] Wireframe   
     - [] ERD   
     - [] ReadME   
+
+
+[StrawhatsTogether]: src='../images/StrawhatsTogether.gif'
