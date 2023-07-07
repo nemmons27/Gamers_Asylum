@@ -77,11 +77,9 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
 ***
 ***
 
-![Image](images/JJKHappy.gif)
 
 ## _**Credits**_
 #### **Images Used**
 #### Strawhats Together -- [Icegif](https://www.icegif.com/one-piece-43/)
 #### Tweaking Timmy -- [Tenor](https://tenor.com/view/gamer-cant-sleep-focused-sleep-is-for-the-weak-gif-11368894)
 #### Tired Goku -- [Bo](https://boo.world/u/anime/EQOloZ/my-body-is-exhausted)
-####  JJK Happy  -- [Gifsec](https://gifsec.com/happy-birthday-anime-gifs/)
