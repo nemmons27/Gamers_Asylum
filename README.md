@@ -34,7 +34,7 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
 ***
 ***
 ### _**Erd**_
-![Image](images/Gamers%20Asylum%20Erd.png)
+![Image](images/Gamers%20Asylum%20Erd%20(1).png)
 ***
 ***
 ### _**Component Hierachy**_
@@ -47,9 +47,9 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
 - **FRIDAY**
     - [X] Project Conceptualization   
     - [X] Outline MODELS     
-    - [] Trello Board   
-    - [] Wireframe   
-    - [] ERD   
+    - [X] Trello Board   
+    - [] Component Hierachy   
+    - [X] ERD   
     - [] ReadME   
 - **SATURDAY**
     -
