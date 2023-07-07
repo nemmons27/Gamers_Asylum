@@ -1,7 +1,7 @@
 ## **Gamers Asylum**
 #### _Every Gamers new favorite safe space_
 
-![Image](StrawhatsTogether)
+![Image](https://www.icegif.com/one-piece-43/)
 
 #### Written by ***Nicholas Emmons***
 #### Published By ***Gamers Asylum***
