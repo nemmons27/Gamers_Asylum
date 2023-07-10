@@ -3,11 +3,13 @@ const logger = require('morgan')
 const cors = require('cors')
 
 const PORT = process.env.PORT || 3001
+
 const genre = require('./routes/GenreRouter')
 const game = require('./routes/GameRouter')
 const comment = require('./routes/CommentRouter')
 const review = require('./routes/ReviewRouter')
 const AuthRouter= require('./routes/AuthRouter')
+
 const db = require('./db')
 
 const app = express()

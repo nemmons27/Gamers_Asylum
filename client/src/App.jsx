@@ -1,25 +1,26 @@
 import { useState, useEffect } from 'react'
-import { Route, Routes } from 'react'
+import { Route, Routes } from 'react-router'
 import Nav from './components/Nav'
 import Home from './pages/Home'
+import About from './pages/About'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <h3>Welcome to Gamer's Asylum</h3>
-        <Nav />
-        <br />
-        <main>
-          <Routes>
-            <Route path="/" element= {<Home />} />
-          </Routes>
-        </main>
-      </div>
-    </>
+    <div>
+      <header>
+        <Nav element={<Nav />}/>
+      </header>
+      <br />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
