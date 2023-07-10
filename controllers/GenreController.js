@@ -1,24 +1,25 @@
-const {Games} = require('../models')
+const {Genres} = require('../models')
 
-const GetGames = async (req,res) => {
+const GetGenres = async (req,res) => {
     try {
-        const games = await Games.find({})
-        res.send(games)
+        const genres = await Genres.find({})
+        res.send(genres)
     } catch (error) {
         throw error
     }
 }
 
-const CreateGame = async (req,res) => {
+const CreateGenre = async (req,res) => {
+    console.log(req.body)
     try {
-        const game = await Games.create({...req.body })
-        res.send(game)
+        const genre = await Genres.create(req.body)
+        res.send(genre)
     } catch (error) {
         throw error
     }
 }
 
 module.exports = {
-    GetGames,
-    CreateGame
+    GetGenres,
+    CreateGenre
 }

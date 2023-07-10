@@ -17,6 +17,4 @@ const reviewSchema = new Schema(
     }
 )
 
-module.exports ={
-    reviewSchema
-}
+module.exports =reviewSchema

@@ -13,6 +13,4 @@ const commentsSchema = new Schema(
     }
 )
 
-module.exports = {
-    commentsSchema
-}
+module.exports = commentsSchema
