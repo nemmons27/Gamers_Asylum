@@ -18,7 +18,19 @@ const CreateReview = async (req,res) => {
     }
 }
 
+const DeleteReview = async (req,res) => {
+    try {
+        await Review.deleteOne({ _id :
+        req.params.review_id})
+        res.send({msg: 'Review Deleted', payload :
+    req.params.review_id, status: 'Ok'})
+    } catch (error) {
+        throw error
+    }
+}
+
 module.exports = {
     GetReview,
-    CreateReview
+    CreateReview,
+    DeleteReview
 }

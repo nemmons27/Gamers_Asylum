@@ -10,5 +10,11 @@ router.post(
     middleware.verifyToken,
     controller.CreateReview
 )
+router.delete(
+    '/:review_id',
+    middleware.stripToken,
+    middleware.verifyToken,
+    controller.DeleteReview
+)
 
 module.exports = router
