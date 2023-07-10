@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/genres', genre)
-app.use('/games', genre)
+app.use('/games', game)
 app.use('/users', AuthRouter)
 app.use('/reviews', review)
 app.use('/comments', comment)
