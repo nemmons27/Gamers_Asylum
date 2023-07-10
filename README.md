@@ -38,7 +38,7 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
 ***
 ***
 ### _**Component Hierachy**_
-![Image]()
+![Image](images/Gamers%20Asylum%20Heirachy.png)
 ***
 ***
 
