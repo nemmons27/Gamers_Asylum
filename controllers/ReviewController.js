@@ -1,7 +1,24 @@
-const router = require('express').Router()
-const controller = require('../controllers/ReviewController')
+const {Review} = require('../models')
 
-router.get('/', controller.GetReview)
-router.post ('/', controller.CreateReview)
+const GetReviews = async (req,res) => {
+    try {
+        const reviews = await Games.find({})
+        res.send(reviews)
+    } catch (error) {
+        throw error
+    }
+}
 
-module.exports = router
+const CreateReview = async (req,res) => {
+    try {
+        const review = await Review.create({...req.body })
+        res.send(review)
+    } catch (error) {
+        throw error
+    }
+}
+
+module.exports = {
+    GetReviews,
+    CreateReview
+}
