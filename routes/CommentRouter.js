@@ -10,5 +10,17 @@ router.post(
     middleware.verifyToken,
     controller.CreateComment
 )
+router.put(
+    '/:comment_id',
+    middleware.stripToken,
+    middleware.verifyToken,
+    controller.UpdateComment
+)
+router.delete(
+    '/:comment_id',
+    middleware.stripToken,
+    middleware.verifyToken,
+    controller.DeleteComment
+)
 
 module.exports = router
