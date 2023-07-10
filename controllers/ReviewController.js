@@ -1,8 +1,8 @@
 const {Review} = require('../models')
 
-const GetReviews = async (req,res) => {
+const GetReview = async (req,res) => {
     try {
-        const reviews = await Games.find({})
+        const reviews = await Review.find({})
         res.send(reviews)
     } catch (error) {
         throw error
@@ -19,6 +19,6 @@ const CreateReview = async (req,res) => {
 }
 
 module.exports = {
-    GetReviews,
+    GetReview,
     CreateReview
 }

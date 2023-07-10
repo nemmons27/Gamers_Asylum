@@ -3,14 +3,8 @@ const {Schema} = require('mongoose')
 const gameSchema = new Schema(
     {
         name: {type: String, required: true},
-        image: {type: String},
-        genre: {
-            name: Schema.Types.ObjectId,
-            ref: 'Genre'
-        },
-        reviews: {
-            type: Schema.Types.ObjectId,
-            ref: 'Review'},
+        genre: {type: String},
+        description: {type: String, required: true},
         id: {type: String}
     },
     {timestamps: true}
