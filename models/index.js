@@ -5,16 +5,16 @@ const reviewSchema = require('./Review')
 const commentSchema = require('./Comment')
 const genreSchema = require('./Genre')
 
-const Games = mongoose.model('Games', gameSchema)
-const Users = mongoose.model('User', userSchema)
-const Reviews = mongoose.model('Reviews', reviewSchema)
-const Comment = mongoose.model('Comments', commentSchema)
-const Genres = mongoose.model('Genres', genreSchema)
+const Game = mongoose.model('Game', gameSchema)
+const User = mongoose.model('User', userSchema)
+const Review = mongoose.model('Review', reviewSchema)
+const Comment = mongoose.model('Comment', commentSchema)
+const Genre = mongoose.model('Genre', genreSchema)
 
 module.exports = {
-    Games,
-    Users,
-    Reviews,
+    Game,
+    User,
+    Review,
     Comment,
-    Genres
+    Genre
 }
