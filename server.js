@@ -19,9 +19,13 @@ app.use(express.urlencoded({ extended: false }))
 
 app.use('/genres', genre)
 app.use('/games', game)
-app.use('/users', AuthRouter)
+app.use('/auth', AuthRouter)
 app.use('/reviews', review)
 app.use('/comments', comment)
+
+app.use('/', (req, res) => {
+    res.send('Connected to the Deep Dive.')
+})
 
 
 app.listen(PORT, () => {
