@@ -94,7 +94,12 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Build About Page
     - [X] Connection check between Home and About Pages using Nav 
 - **TUESDAY**
-    - [X] 
+    - [X] Build Games Page
+    - [] Add Games Route to NAV
+    - [] Connection check between Game using the Nav on all other pages
+    - []
+    - []
+    - []
 - **WEDNESDAY**
     - []
     - []
