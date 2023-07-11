@@ -51,26 +51,85 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [] Component Hierachy   
     - [X] ERD   
     - [] ReadME   
+    - [X] Vite@create to build React 
+    - [X] Install dependencies, Mongoose and Axios
+    - [X] Express generate Backend
+    - [X] Touch server.js
+    - [X] Make all directories necessary
 - **SATURDAY**
-    -
-    -
-    -
-    -
+    - [X] Touch index.js in Express DB
+    - [X] Enter MongoDB Database Uri into .env
+    - [X] Activate npm run dev by including node --watch server.js to package.json
+    - [X] Connection test for Vite and Express servers
+    - [X] Connect to Db and Verify in MongoDB
 - **SUNDAY**
-    -
-    -
-    -
-    -
+    - [X] Create Models for Game, Genre, Review & Comment
+    - [X] Create index.js to house Models
+    - [X] Create Controller for Game
+    - [X] Route Game and add one to Db using Insomnia
+    - [X] Create Controller for Genre
 - **MONDAY**
-    -
-    -
-    -
-    -
+    - [X] Route Genre
+    - [X] Add all Genres to Db using Insomnia
+    - [X] Create Controllers for Review & Comment 
+    - [X] Route Review & Comment
+    - [X] Create User Model 
+    - [X] Create AuthController
+    - [X] Create Middleware
+    - [X] Route AuthRouter
+    - [X] Secure existing Routes using Tokens
+    - [X] Create User Model in Backend
+    - [X] Connection check between Db and User Model
+    - [X] Complete CRUD implemented in Game 
+    - [X] Connection check for Game using Insomnia
+    - [X] Complete CRUD implemented in Comment
+    - [X] Connection check for Comment using Insomnia
+    - [X] Complete CRUD implemented in Review
+    - [X] Connection check for Review using Insomnia
+    - [X] Focus Shift to Frontend
+    - [X] Import Router to Main.jsx
+    - [X] Build Home.jsx
+    - [X] Build NAV component
+    - [X] Start designing Home Page
+    - [X] Build About Page
+    - [X] Connection check between Home and About Pages using Nav 
 - **TUESDAY**
-    -
-    -
-    -
-    -
+    - [X] 
+- **WEDNESDAY**
+    - []
+    - []
+    - []
+    - []
+- **THURSDAY**
+    - []
+    - []
+    - []
+    - []
+- **FRIDAY**
+    - []
+    - []
+    - []
+    - []
+- **SATURDAY**
+    - []
+    - []
+    - []
+    - []
+- **SUNDAY**
+    - []
+    - []
+    - []
+    - []
+- **MONDAY**
+    - []
+    - []
+    - []
+    - []
+- **TUESDAY**
+    - []
+    - []
+    - []
+    - []
 - **WEDNESDAY**
     - [] Final checks
     - [] Deployment
