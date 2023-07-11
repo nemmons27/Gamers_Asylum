@@ -6,11 +6,14 @@ const Nav = () => {
         <header>
             <div className='nav'>
                 <ul>
-                    <li>
+                    <li className='navLink'>
                         <Link to="/">Gamer's Asylum</Link>
                     </li>
-                    <li>
+                    <li className='navLink'>
                         <Link to="/about">About</Link>
+                    </li>
+                    <li className='navLink'>
+                        <Link to="/genres">Genre</Link>
                     </li>
                 </ul>
             </div>
