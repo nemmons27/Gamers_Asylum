@@ -97,11 +97,14 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Build Genres Page
     - [X] Add Genre Route to NAV
     - [X] Connection check between Genre using the Nav on all other pages
-    - []
-    - []
-    - []
+    - [] Make Services directory
+    - [] Create api.js in Services
+    - [] Create GameServices.js in Services
+    - [] Create Auth.js in Services
+    - [] Put Game data in Db
+    - [] Connection Check between Backend and Frontend
 - **WEDNESDAY**
-    - []
+    - [] Create GameDetails in game
     - []
     - []
     - []
