@@ -2,7 +2,8 @@ const router = require('express').Router()
 const controller = require('../controllers/GameController')
 const middleware = require('../middleware')
 
-router.get('/', controller.GetGame)
+router.get('/', controller.GetGames)
+router.get('/:id', controller.GetGameById)
 router.post ('/', controller.CreateGame)
 router.put('/:game_id', controller.UpdateGame)
 router.put(

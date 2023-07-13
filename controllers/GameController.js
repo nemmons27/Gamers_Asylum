@@ -1,8 +1,17 @@
 const {Game} = require('../models')
 
-const GetGame = async (req,res) => {
+const GetGames = async (req,res) => {
     try {
         const game = await Game.find({})
+        res.send(game)
+    } catch (error) {
+        throw error
+    }
+}
+
+const GetGameById = async (req,res) => {
+    try{
+        const game = await Game.findById(req.params.id)
         res.send(game)
     } catch (error) {
         throw error
@@ -37,8 +46,9 @@ const DeleteGame = async (req,res) => {
 }
 
 module.exports = {
-    GetGame,
+    GetGames,
     CreateGame,
     UpdateGame,
-    DeleteGame
+    DeleteGame,
+    GetGameById
 }

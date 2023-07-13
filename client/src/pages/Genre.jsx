@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { GetGame } from '../services/GameServices'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Genre = () => {
     let navigate = useNavigate()
@@ -18,7 +19,9 @@ const Genre = () => {
         <div className="grid col=4">
             {games.map((game) => (
                 <div className='card' key={GetGame.id}>
-                    <h3>{game.name}</h3>
+                    <Link to={`${game._id}`}>
+                        <h3>{game.name}</h3>
+                    </Link>
                     <p>{game.genre}</p>
                     <p>{game.description}</p>
                 </div>

@@ -1,10 +1,19 @@
 import Client from './api'
 
-export const GetGame = async () => {
+export const GetGames = async () => {
     try {
         const res = await Client.get('/games')
         return res.data
     } catch (error){
+        throw error
+    }
+}
+
+export const GetGame = async (req,res) => {
+    try{
+        const res = await Client.get('/games/${id}')
+        return res.data
+    } catch (error) {
         throw error
     }
 }
