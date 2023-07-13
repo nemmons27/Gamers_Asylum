@@ -20,10 +20,11 @@ const GameDetails = () => {
     return (
         <div className="details">
             <div className="details-header">
-                <img src="" />
-                    <h3>{game.name}</h3>
-                    <p>{game.genre}</p>
-                    <p>{game.description}</p>
+                <div className='card' key={idx}>
+                        <h4>{game.name}</h4>
+                        <p>{game.genres}</p>
+                        <p>{game.description}</p>
+                </div>
             </div>
         </div>
     )

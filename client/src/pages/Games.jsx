@@ -1,17 +1,19 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { GetGames } from '../services/GameServices'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-export const Games = ({user}) => {
+export const Games = ({ user }) => {
+    let navigate = useNavigate()
     const [games, setGames] = useState([])
 
-    const handleGames = async () => {
-        const data = await GetGames()
-        setGames(data)
-    }
 
     useEffect(() => {
+        const handleGames = async () => {
+            const data = await GetGames()
+            setGames(data)
+        }
         handleGames()
     }, [])
 
@@ -36,4 +38,3 @@ export const Games = ({user}) => {
         </div>
     )
 }
-export default Games

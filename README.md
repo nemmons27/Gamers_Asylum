@@ -105,6 +105,7 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [] Connection Check between Backend and Frontend
 - **WEDNESDAY**
     - [X] Create GameDetails
+    - [X] ReWork and Remove Genre
     - [] Create Add New Game Form
     - [] Create Login and Register pages
     - [] Add both new pages to App.jsx
