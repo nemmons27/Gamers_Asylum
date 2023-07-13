@@ -1,9 +1,9 @@
-const {Genres} = require('../models')
+const {Genre} = require('../models')
 
-const GetGenres = async (req,res) => {
+const GetGenre = async (req,res) => {
     try {
-        const genres = await Genres.find({})
-        res.send(genres)
+        const genre = await Genre.find({})
+        res.send(genre)
     } catch (error) {
         throw error
     }
@@ -12,7 +12,7 @@ const GetGenres = async (req,res) => {
 const CreateGenre = async (req,res) => {
     console.log(req.body)
     try {
-        const genre = await Genres.create(req.body)
+        const genre = await Genre.create(req.body)
         res.send(genre)
     } catch (error) {
         throw error
@@ -20,6 +20,6 @@ const CreateGenre = async (req,res) => {
 }
 
 module.exports = {
-    GetGenres,
+    GetGenre,
     CreateGenre
 }

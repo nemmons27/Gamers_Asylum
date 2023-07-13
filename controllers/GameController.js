@@ -1,9 +1,9 @@
-const {Games} = require('../models')
+const {Game} = require('../models')
 
-const GetGames = async (req,res) => {
+const GetGame = async (req,res) => {
     try {
-        const games = await Games.find({})
-        res.send(games)
+        const game = await Game.find({})
+        res.send(game)
     } catch (error) {
         throw error
     }
@@ -11,7 +11,7 @@ const GetGames = async (req,res) => {
 
 const CreateGame = async (req,res) => {
     try {
-        const game = await Games.create({...req.body })
+        const game = await Game.create({...req.body })
         res.send(game)
     } catch (error) {
         throw error
@@ -29,7 +29,7 @@ const UpdateGame = async (req,res) => {
 
 const DeleteGame = async (req,res) => {
     try {
-        await Games.deleteOne({_id: req.params.game_id})
+        await Game.deleteOne({_id: req.params.game_id})
         res.send({msg: 'Game has reached the Shadow Realm', payload: req.params.game_id, status: 'OK'})
     } catch (error) {
         throw error
@@ -37,7 +37,7 @@ const DeleteGame = async (req,res) => {
 }
 
 module.exports = {
-    GetGames,
+    GetGame,
     CreateGame,
     UpdateGame,
     DeleteGame

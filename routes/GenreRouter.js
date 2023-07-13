@@ -2,7 +2,7 @@ const router = require('express').Router()
 const controller = require('../controllers/GenreController')
 const middleware = require('../middleware')
 
-router.get('/', controller.GetGenres)
+router.get('/', controller.GetGenre)
 router.post ('/', controller.CreateGenre)
 router.post(
     '/',

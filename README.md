@@ -104,9 +104,12 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [] Put Game data in Db
     - [] Connection Check between Backend and Frontend
 - **WEDNESDAY**
-    - [] Create GameDetails in game
-    - []
-    - []
+    - [] Create GameDetails
+    - [] Create Add New Game Form
+    - [] Create Login and Register pages
+    - [] Add both new pages to App.jsx
+    - [] Connection Check for Sign in
+    - [] 
     - []
 - **THURSDAY**
     - []

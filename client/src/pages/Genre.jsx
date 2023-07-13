@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { GetGames } from '../services/GameServices'
+import { GetGame } from '../services/GameServices'
 import { useNavigate } from 'react-router-dom'
 
 const Genre = () => {
@@ -8,7 +8,7 @@ const Genre = () => {
 
     useEffect(() => {
         const handleGames = async () => {
-            const data = await GetGames()
+            const data = await GetGame()
             setGames(data)
         }
         handleGames()
@@ -17,7 +17,7 @@ const Genre = () => {
     return (
         <div className="grid col=4">
             {games.map((game) => (
-                <div className='card' key={GetGames.id}>
+                <div className='card' key={GetGame.id}>
                     <h3>{game.name}</h3>
                     <p>{game.genre}</p>
                     <p>{game.description}</p>
