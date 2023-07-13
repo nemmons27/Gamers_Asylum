@@ -15,9 +15,6 @@ const Nav = () => {
                     <li className='navLink'>
                         <Link to="/games">Games</Link>
                     </li>
-                    <li className='navLink'>
-                        <Link to="/genres">Genre</Link>
-                    </li>
                 </ul>
             </nav>
         </header>

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { GetGames } from '../services/GameServices'
 import { Link } from 'react-router-dom'
 
-export const Games = () => {
+export const Games = ({user}) => {
     const [games, setGames] = useState([])
 
     const handleGames = async () => {
@@ -21,10 +21,13 @@ export const Games = () => {
         <div>
             <h4>Games</h4>
             <div className='grid col=4'>
-                {games.map((games, idx) => (
+                {games.map((game, idx) => (
                     <div className='card' key={idx}>
+                        <Link to={`${game.id}`}>
+                            <h4>{game.name}</h4>
+                        </Link>
                         <div>
-                            <p>Game Location</p>
+                            <p>{game.description}</p>
                         </div>
                     </div>
                 )

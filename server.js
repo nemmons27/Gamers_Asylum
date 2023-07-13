@@ -4,7 +4,6 @@ const cors = require('cors')
 
 const PORT = process.env.PORT || 3001
 
-const genre = require('./routes/GenreRouter')
 const game = require('./routes/GameRouter')
 const comment = require('./routes/CommentRouter')
 const review = require('./routes/ReviewRouter')
@@ -19,7 +18,6 @@ app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
-app.use('/genres', genre)
 app.use('/games', game)
 app.use('/users', AuthRouter)
 app.use('/reviews', review)
