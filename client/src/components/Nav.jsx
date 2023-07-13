@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Nav = () => {
     return(
         <header>
-            <div className='nav'>
+            <nav className='navLine'>
                 <ul>
                     <li className='navLink'>
                         <Link to="/">Gamer's Asylum</Link>
@@ -13,10 +13,13 @@ const Nav = () => {
                         <Link to="/about">About</Link>
                     </li>
                     <li className='navLink'>
+                        <Link to="/games">Games</Link>
+                    </li>
+                    <li className='navLink'>
                         <Link to="/genres">Genre</Link>
                     </li>
                 </ul>
-            </div>
+            </nav>
         </header>
     )
 }

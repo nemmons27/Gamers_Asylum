@@ -3,23 +3,35 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+  background-color: cadetblue;
+  color: antiquewhite;
 }
 
 .nav{
   margin: .5em;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 2px solid antiquewhite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.navLine{
+  display: inline;
 }
 
+.navLink{
+  display: inline;
+  margin: 2vmin;
+}
 .card {
-  padding: 2em;
+  padding: 4vmin;
+  border: 2px solid antiquewhite;
 }
 
-.read-the-docs {
+/* .read-the-docs {
   color: #888;
-}
+} */
