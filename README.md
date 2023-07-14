@@ -79,6 +79,7 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Route AuthRouter
     - [X] Secure existing Routes using Tokens
     - [X] Create User Model in Backend
+- **TUESDAY**
     - [X] Connection check between Db and User Model
     - [X] Complete CRUD implemented in Game 
     - [X] Connection check for Game using Insomnia
@@ -93,7 +94,7 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Start designing Home Page
     - [X] Build About Page
     - [X] Connection check between Home and About Pages using Nav 
-- **TUESDAY**
+- **WEDNESDAY**
     - [X] Build Genres Page
     - [X] Add Genre Route to NAV
     - [X] Connection check between Genre using the Nav on all other pages
@@ -103,27 +104,26 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Create Auth.js in Services
     - [X] Put Game data in Db
     - [X] Connection Check between Backend and Frontend
-- **WEDNESDAY**
+- **THURSDAY**
     - [X] Create GameDetails
     - [X] ReWork and Remove Genre
     - [X] Create Add New Game Form
     - [X] Create Register page
-    - [] Create Login page
+    - [X] Create Login page
+    - [X] Fill out both pages
     - [] Add both new pages to App.jsx
     - [] Connection Check for Sign in
     - [] 
-    - []
-- **THURSDAY**
-    - []
-    - []
-    - []
-    - []
 - **FRIDAY**
     - []
     - []
     - []
     - []
+    - []
+    - []
+    - []
 - **SATURDAY**
+    - []
     - []
     - []
     - []

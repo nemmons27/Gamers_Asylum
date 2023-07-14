@@ -8,6 +8,10 @@ const LogIn = (props) => {
 
     const [formValues, setFormValues] = useState({ email: '', password: ''})
 
+    const handleChange = (e) => {
+        setFormValues({...formValues, [e.target.name]: e.target.value})
+    }
+
     const handleSubmit = async (e) => {
         e.preventDefault()
         const payload = await LogInUser(formValues)
@@ -24,7 +28,7 @@ const LogIn = (props) => {
                     <div className="input-wrapper">
                         <h4>Email: </h4>
                         <input 
-                        onChange={handleSChange}
+                        onChange={handleChange}
                         name="email"
                         type="email"
                         placeholder="example@example.com"
@@ -34,7 +38,7 @@ const LogIn = (props) => {
                     <div className="input-wrapper">
                         <h4>Password: </h4>
                         <input 
-                        onChange={handleSChange}
+                        onChange={handleChange}
                         name="password"
                         type="password"
                         value={formValues.password}
