@@ -1,12 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { GetGame } from "../services/GameServices";
 
 const GameDetails = () => {
     let { id } = useParams()
-
     const [game, setGame] = useState({})
 
     useEffect(() => {
@@ -20,11 +18,9 @@ const GameDetails = () => {
     return (
         <div className="details">
             <div className="details-header">
-                <div className='card' key={idx}>
-                        <h4>{game.name}</h4>
-                        <p>{game.genre}</p>
-                        <p>{game.description}</p>
-                </div>
+                <h4>{game.name}</h4>
+                <p>{game.genre}</p>
+                <p>{game.description}</p>
             </div>
         </div>
     )

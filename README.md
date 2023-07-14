@@ -101,8 +101,8 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Create api.js in Services
     - [X] Create GameServices.js in Services
     - [X] Create Auth.js in Services
-    - [] Put Game data in Db
-    - [] Connection Check between Backend and Frontend
+    - [X] Put Game data in Db
+    - [X] Connection Check between Backend and Frontend
 - **WEDNESDAY**
     - [X] Create GameDetails
     - [X] ReWork and Remove Genre
