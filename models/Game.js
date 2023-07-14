@@ -1,15 +1,16 @@
-const {Schema} = require('mongoose')
+const { Schema } = require('mongoose')
 
 const gameSchema = new Schema(
     {
-        name: {type: String, required: true},
+        name: { type: String, required: true },
         genre: {
-            type: Schema.Types.ObjectId,
-            ref: 'Genre'
+            type: String,
+            enum: ['Adventure', 'Action', 'RPG', 'Shooting', 'Driving', 'Fighting', 'MMO', 'Puzzle', 'Horror', 'Sports'],
+            maxItems: 3
         },
-        description: {type: String, required: true},
-        id: {type: String}
+        description: { type: String, required: true },
+        id: { type: String }
     },
-    {timestamps: true}
+    { timestamps: true }
 )
 module.exports = gameSchema

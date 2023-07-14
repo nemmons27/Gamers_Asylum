@@ -4,7 +4,7 @@ import { GetGames } from '../services/GameServices'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-export const Games = ({ user }) => {
+const Games = ({ user }) => {
     let navigate = useNavigate()
     const [games, setGames] = useState([])
 
@@ -38,3 +38,5 @@ export const Games = ({ user }) => {
         </div>
     )
 }
+
+export default Games
