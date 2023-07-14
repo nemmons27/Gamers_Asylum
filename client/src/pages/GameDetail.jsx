@@ -22,7 +22,7 @@ const GameDetails = () => {
             <div className="details-header">
                 <div className='card' key={idx}>
                         <h4>{game.name}</h4>
-                        <p>{game.genres}</p>
+                        <p>{game.genre}</p>
                         <p>{game.description}</p>
                 </div>
             </div>

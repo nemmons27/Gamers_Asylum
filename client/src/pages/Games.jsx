@@ -17,8 +17,6 @@ const Games = ({ user }) => {
         handleGames()
     }, [])
 
-
-
     return (
         <div>
             <h4>Games</h4>
@@ -29,6 +27,7 @@ const Games = ({ user }) => {
                             <h4>{game.name}</h4>
                         </Link>
                         <div>
+                            <p>{game.genre}</p>
                             <p>{game.description}</p>
                         </div>
                     </div>
