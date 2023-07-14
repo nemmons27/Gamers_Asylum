@@ -25,8 +25,7 @@ const NewGame = ({getGames}) => {
 
     return (
         <div>
-            <form action="">
-            <form onSubmit={handleSubmit}>
+            <form action="" onSubmit={handleSubmit}>
                 <h3>Add a new Game to The Asylum</h3>
                 <br />
                 <h5>Name: </h5>
@@ -54,7 +53,6 @@ const NewGame = ({getGames}) => {
                 <br />
                 <br />
                 <button className="button" type="submit">Submit</button>
-            </form>
             </form>
         </div>
     )
