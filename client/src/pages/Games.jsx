@@ -17,7 +17,7 @@ const Games = ({ user }) => {
         handleGames()
     }, [])
 
-    return (
+    return user ? (
         <div>
             <h4>Games</h4>
             <div className='grid col=4'>
@@ -34,6 +34,11 @@ const Games = ({ user }) => {
                 )
                 )}
             </div>
+        </div>
+    ) : (
+        <div className='guard'>
+            <h4>Log in to see more! </h4>
+            <button className='button' onClick={() => navigate('/login')}>Log In</button>
         </div>
     )
 }
