@@ -46,6 +46,10 @@ const LogIn = (props) => {
                     </div>
                     <button disabled={!formValues.email || !formValues.password}> Log In</button>
                 </form>
+                <br />
+                <br />
+                <h4>OR</h4>
+                <button className="button" onClick={() => navigate('./register')}>Register Here</button>
             </div>
         </div>
     )

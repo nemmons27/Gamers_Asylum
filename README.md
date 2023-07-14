@@ -111,7 +111,7 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Create Register page
     - [X] Create Login page
     - [X] Fill out both pages
-    - [] Add both new pages to App.jsx
+    - [X] Add both new pages to App.jsx
     - [] Connection Check for Sign in
     - [] 
 - **FRIDAY**
