@@ -2,27 +2,30 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Nav = () => {
+    let unlimited
+    if (user) {
+        unlimited = (
+            <nav>
+                <Link to="/games">Main Library</Link>
+                <Link to="/new">Add Game</Link>
+                <Link to="/about">About</Link>
+                <Link onClick={handleLogOut} to="/">LogOut</Link>
+            </nav>
+        )
+    }
+
+    const limited = (
+        <nav>
+            <Link to="/">Gamer's Asylum</Link>
+            <Link to="/about">About</Link>
+            <Link to="/register">Register</Link>
+            <Link to="/login">Log In</Link>
+        </nav>
+
+    )
     return(
         <header>
-            <nav className='navLine'>
-                <ul>
-                    <li className='navLink'>
-                        <Link to="/">Gamer's Asylum</Link>
-                    </li>
-                    <li className='navLink'>
-                        <Link to="/about">About</Link>
-                    </li>
-                    <li className='navLink'>
-                        <Link to="/games">Games</Link>
-                    </li>
-                    <li className='navLink'>
-                        <Link to="/newgame">New Game</Link>
-                    </li>
-                    <li className='navLink'>
-                        <Link to="/login">Log In</Link>
-                    </li>
-                </ul>
-            </nav>
+            {user ? unlimited : limited}
         </header>
     )
 }

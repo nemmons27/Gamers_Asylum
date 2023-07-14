@@ -15,14 +15,30 @@ import { set } from 'mongoose'
 
 function App() {
   const [user, setUser] = useState(null)
+  const checkToken = async () => {
+    const user = await CheckSession()
+    setUser(user)
+  }
 
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      checkToken()
+    }
+  }, [])
 
+  const handleLogOut = () => {
+    setUser(null)
+    localStorage.clear()
+  }
 
 
   return (
     <div>
       <header>
-        <Nav element={<Nav />}/>
+        <Nav 
+        user={user}
+        handleLogOut={handleLogOut}/>
       </header>
       <br />
       <main>
@@ -32,7 +48,7 @@ function App() {
           <Route path="/login" element={<LogIn setUser={setUser} />} />
           <Route path="/games" element={<Games user={user}/>}  />
           <Route path="/games/:id" element={<GameDetails user={user}/>}/>
-          <Route path="/newgame" element={<NewGame user={user}/>} />
+          <Route path="/new" element={<NewGame user={user}/>} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>

@@ -48,7 +48,7 @@ const LogIn = (props) => {
                 </form>
                 <br />
                 <br />
-                <h4>OR</h4>
+                <h4>Or</h4>
                 <button className="button" onClick={() => navigate('./register')}>Register Here</button>
             </div>
         </div>
