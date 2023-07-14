@@ -6,6 +6,7 @@ const NewGame = ({getGames}) => {
 
     const initialState = {
         name: '',
+        image: '',
         description: '',
         genre: '',
     }
@@ -16,7 +17,7 @@ const NewGame = ({getGames}) => {
         e.preventDefault()
         await axios.post('http://localhost:3001/games', formState)
         setFormState(initialState)
-        getGames()
+        createGame()
     }
 
     const handleChange = (e) => {
@@ -29,10 +30,10 @@ const NewGame = ({getGames}) => {
                 <h3>Add a new Game to The Asylum</h3>
                 <br />
                 <h5>Name: </h5>
-                <input type="text" id="name" />
+                <input type="text" id="name" onChange={handleChange} value={formState.name}/>
                 <br />
                 <h5>Cover url: </h5>
-                <input type="text" id="image" />
+                <input type="text" id="image" onChange={handleChange} value={formState.image}/>
                 <br />
                 <h5>Description: </h5>
                 <input type="text" id="description" className="descriptionText" onChange={handleChange} value={formState.description}/>
