@@ -4,6 +4,7 @@ const middleware = require('../middleware')
 const Register = async (req, res) => {
     try {
         const { email, password, name } = req.body
+        console.log(req.body)
         let passwordDigest = await middleware.hashPassword(password, process.env.SALT_ROUNDS)
         let existingUser = await User.findOne({ email })
         if (existingUser) {
@@ -26,8 +27,9 @@ const Login = async (req, res) => {
         let matched = await middleware.comparePassword(
             user.passwordDigest,
             password
-        )
-        if (matched) {
+            )
+            console.log(matched)
+            if (matched) {
             let payload = {
                 id: user.id,
                 email: user.email

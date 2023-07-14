@@ -12,7 +12,7 @@ body{
 }
 
 .nav{
-  margin: .5em;
+  margin: 1vmin;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,6 +26,13 @@ body{
 .navLink{
   display: inline;
   margin: 2vmin;
+}
+a {
+  margin: 1vmin;
+  color: antiquewhite;
+}
+a:hover {
+  color: lightcyan;
 }
 .card {
   padding: 4vmin;

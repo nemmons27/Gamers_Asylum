@@ -1,11 +1,18 @@
 import React from "react";
-import {RegisterUser} from '../services/Auth'
+import { useState } from "react";
+import { RegisterUser } from '../services/Auth'
 import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+    const [formValues, setFormValues] = useState({
+        name: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+    })
     let navigate = useNavigate()
     const handleChange = (e) => {
-        setFormValues({...formValues, [e.target.name]: e.target.value})
+        setFormValues({ ...formValues, [e.target.name]: e.target.value })
     }
 
     const handleSubmit = async (e) => {
@@ -15,13 +22,13 @@ const Register = () => {
             email: formValues.email,
             password: formValues.password
         }),
-        setFormValues({
-            name: '',
-            email: '',
-            password: '',
-            confirmPassword: ''
-        }),
-        navigate('/register')
+            setFormValues({
+                name: '',
+                email: '',
+                password: '',
+                confirmPassword: ''
+            }),
+            navigate('/register')
     }
 
 
@@ -32,45 +39,45 @@ const Register = () => {
                     <div className="input-wrapper">
                         <h4>Name</h4>
                         <input
-                        onChange={handleChange}
-                        name="name"
-                        type="text"
-                        placeholder="John Cena "
-                        value={formValues.name}
-                        required />
+                            onChange={handleChange}
+                            name="name"
+                            type="text"
+                            placeholder="John Cena "
+                            value={formValues.name}
+                            required />
                     </div>
                     <div className="input-wrapper">
                         <h4>Email</h4>
                         <input
-                        onChange={handleChange}
-                        name="email"
-                        type="email"
-                        placeholder="example@example.com"
-                        value={formValues.email}
-                        required />
+                            onChange={handleChange}
+                            name="email"
+                            type="email"
+                            placeholder="example@example.com"
+                            value={formValues.email}
+                            required />
                     </div>
                     <div className="input-wrapper">
                         <h4>Password</h4>
-                        <input 
-                        onChange={handleChange}
-                        type="password"
-                        name="confirmPassword"
-                        value={formValues.password}
-                        required/>
+                        <input
+                            onChange={handleChange}
+                            type="password"
+                            name="password"
+                            value={formValues.password}
+                            required />
                     </div>
                     <div className="input-wrapper">
                         <h4>Confirm Password</h4>
-                        <input 
-                        onChange={handleChange}
-                        type="password"
-                        name="confirmPassword"
-                        value={formValues.confirmPassword}
-                        required/>
+                        <input
+                            onChange={handleChange}
+                            type="password"
+                            name="confirmPassword"
+                            value={formValues.confirmPassword}
+                            required />
                     </div>
                     <button
-                    disabled={
-                        !formValues.email || (!formValues.password && formValues.confirmPassword === formValues.password)
-                    }> Register </button>
+                        disabled={
+                            !formValues.email || (!formValues.password && formValues.confirmPassword === formValues.password)
+                        }> Register </button>
                 </form>
             </div>
         </div>

@@ -6,9 +6,9 @@ const Client = Axios.create({ baseURL: BASE_URL})
 
 Client.interceptors.request.use(
     (config) => {
-        const Token = localStorage.getItem('token')
+        const Token = localStorage.getItem('Token')
         if (Token) {
-            config.headers['Authorization'] = `Bearer${token}`
+            config.headers['Authorization'] = `Bearer ${Token}`
         }
         return config
     },

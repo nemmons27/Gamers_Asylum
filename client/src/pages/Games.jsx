@@ -23,7 +23,7 @@ const Games = ({ user }) => {
             <div className='grid col=4'>
                 {games.map((game, idx) => (
                     <div className='card' key={idx}>
-                        <Link to={`${game.id}`}>
+                        <Link to={`/games/${game._id}`}>
                             <h4>{game.name}</h4>
                         </Link>
                         <div>
