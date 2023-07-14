@@ -107,7 +107,8 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Create GameDetails
     - [X] ReWork and Remove Genre
     - [X] Create Add New Game Form
-    - [] Create Login and Register pages
+    - [X] Create Register page
+    - [] Create Login page
     - [] Add both new pages to App.jsx
     - [] Connection Check for Sign in
     - [] 
