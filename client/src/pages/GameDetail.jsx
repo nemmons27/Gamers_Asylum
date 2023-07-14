@@ -2,8 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetGame } from "../services/GameServices";
+import { Link } from "react-router-dom"
 
-const GameDetails = () => {
+const GameDetail = ({user, games, handleGames}) => {
     let { id } = useParams()
     const [game, setGame] = useState({})
 
@@ -13,8 +14,8 @@ const GameDetails = () => {
             setGame(data)
         }
         handleGame()
-    })
-
+    }, [])
+console.log(game)
     return (
         <div className="details">
             <div className="details-header">
@@ -26,4 +27,4 @@ const GameDetails = () => {
     )
 }
 
-export default GameDetails
+export default GameDetail

@@ -3,7 +3,7 @@ const controller = require('../controllers/GameController')
 const middleware = require('../middleware')
 
 router.get('/', controller.GetGames)
-router.get('/:game_id', controller.GetGameById)
+router.get('/:id', controller.GetGameById)
 router.post ('/', controller.CreateGame)
 router.put('/:game_id', controller.UpdateGame)
 router.put(
