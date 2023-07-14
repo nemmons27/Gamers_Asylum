@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Games from './pages/Games'
 import GameDetails from './pages/GameDetail'
+import NewGame from './components/NewGame'
 
 import './App.css'
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/games" element={<Games user={user}/>}  />
           <Route path="/games/:id" element={<GameDetails />}/>
+          <Route path="/newgame" element={<NewGame />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </main>
