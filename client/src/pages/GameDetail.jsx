@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetGame } from "../services/GameServices";
-import { Link } from "react-router-dom"
 import Review from "../components/Review";
 
 const GameDetail = ({user, games, handleGames}) => {
@@ -16,7 +15,7 @@ const GameDetail = ({user, games, handleGames}) => {
         }
         handleGame()
     }, [])
-console.log(game)
+
     return (
         <div className="details">
             <div className="details-header">
@@ -24,7 +23,9 @@ console.log(game)
                 <h4>{game.name}</h4>
                 <p>{game.genre}</p>
                 <p>{game.description}</p>
-                <p>Reviews : <Review /></p>
+                <br />
+                <p>Reviews :
+                    <Review  game={game} gameId={game._id} user={user} handleGames={handleGames}/></p>
             </div>
         </div>
     )

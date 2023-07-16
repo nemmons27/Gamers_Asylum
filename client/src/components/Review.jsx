@@ -5,7 +5,23 @@ import { Link } from "react-router-dom";
 const Review = () => {
     return (
         <div>
-            <p>Review Section</p>
+            <table className="reviewTable">
+                <thead className="reviewHead">
+                    <tr>
+                        <th>User</th>
+                        <th>Date</th>
+                        <th>Review</th>
+                    </tr>
+                </thead>
+
+                <tbody className="reviewBody">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     )
 }

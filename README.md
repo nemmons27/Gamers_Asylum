@@ -122,8 +122,11 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Fix Game Cover to render on Details
     - [X] Fix submit button on Add Game 
     - [X] Create footer for website
-    - [] Build Reviews out in Details
-    - [] 
+    - [X] Build Reviews out in components
+    - [X] Put Reviews out in Detail
+    - [X] Add Game Cover to the main view
+    - [X] Add Games into Db using Add Game page
+    - [] Css styling for the Game Image on Main Library and Details
     - []
     - []
 - **SATURDAY**

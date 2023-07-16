@@ -56,7 +56,7 @@ const NewGame = ({getGames, user}) => {
                 </select>
                 <br />
                 <br />
-                <button className="button" type="submit">Submit</button>
+                <button className="button" type="submit" onSubmit={handleSubmit}>Submit</button>
             </form>
         </div>
     ) : (
