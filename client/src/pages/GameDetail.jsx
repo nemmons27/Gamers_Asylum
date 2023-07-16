@@ -19,6 +19,7 @@ console.log(game)
     return (
         <div className="details">
             <div className="details-header">
+                <img src={game.image} alt="gameImg" className="gameImage"/>
                 <h4>{game.name}</h4>
                 <p>{game.genre}</p>
                 <p>{game.description}</p>

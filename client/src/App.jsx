@@ -36,10 +36,13 @@ function App() {
   }, [])
 
   const handleLogOut = () => {
+    localStorage.removeItem('token')
     setUser(null)
-    localStorage.clear()
   }
 
+  const getYear = () => {
+    return new Date().getFullYear()
+  }
 
   return (
     <div>
@@ -59,6 +62,7 @@ function App() {
           <Route path="/new" element={<NewGame user={user}/>} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <footer>© {getYear()} Gamer's Asylum, all rights reserved.</footer>
       </main>
     </div>
   )

@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Client from "../services/api";
 
-const NewGame = ({getGames}) => {
+const NewGame = ({getGames, user}) => {
 
     const initialState = {
         name: '',
@@ -13,18 +14,20 @@ const NewGame = ({getGames}) => {
 
     const [formState, setFormState] = useState(initialState)
 
+    const navigate = useNavigate()
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await axios.post('http://localhost:3001/games', formState)
+        await Client.post('/games', formState)
         setFormState(initialState)
-        createGame()
+        navigate('/games')
     }
 
     const handleChange = (e) => {
         setFormState({ ...formState, [e.target.id]: e.target.value})
     }
 
-    return (
+    return user ? (
         <div>
             <form action="" onSubmit={handleSubmit}>
                 <h3>Add a new Game to The Asylum</h3>
@@ -55,6 +58,11 @@ const NewGame = ({getGames}) => {
                 <br />
                 <button className="button" type="submit">Submit</button>
             </form>
+        </div>
+    ) : (
+        <div className='guard'>
+            <h4>Log in to see more! </h4>
+            <button className='button' onClick={() => navigate('/login')}>Log In</button>
         </div>
     )
 }

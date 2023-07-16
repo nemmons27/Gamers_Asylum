@@ -106,18 +106,22 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Connection Check between Backend and Frontend
 - **THURSDAY**
     - [X] Create GameDetails
-    - [X] ReWork and Remove Genre
+    - [X] ReWork and Remove Genre¿
+    - [X] Add Genre to Game Model
     - [X] Create Add New Game Form
+    - [X] Connection Check for GameDetails
+    - [X] Connection Check for New Game
     - [X] Create Register page
     - [X] Create Login page
     - [X] Fill out both pages
     - [X] Add both new pages to App.jsx
-    - [] 
-    - [] 
+    - [X] Add Login and Register to Nav
+    - [X] Protect all paths if the user isn't logged in
+    - [X] Connection Check for Login and Register
 - **FRIDAY**
     - []
     - []
-    - []Connection Check for Sign in
+    - []
     - []
     - []
     - []
@@ -140,12 +144,11 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - []
 - **TUESDAY**
     - []
-    - []
-    - []
-    - []
-- **WEDNESDAY**
-    - [] Final checks
+    - [] 
+    - [] Final Checks and run throughs
     - [] Deployment
+- **WEDNESDAY**
+    - [] Present with some passion!
 ***
 ***
 
