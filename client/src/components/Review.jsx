@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import Client from "../services/api";
 import { GetReviews } from '../services/GameServices'
+import { GetGames } from '../services/GameServices'
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Review = ({ handleGames, game, user}) => {
+const Review = ({ handleGames, games, game, user}) => {
     const intialState= {
-        review: 'Add a Review'
+        review: ''
     }
 
     const [reviewState, setReviewState] = useState(intialState)
@@ -17,11 +18,11 @@ const Review = ({ handleGames, game, user}) => {
         e.preventDefault()
         let updatedState = {
             ...reviewState,
-            user: user.id
+            user: user.id,
         }
         console.log(updatedState)
-        await Client.post('/reviews', updatedState)
-        setReviewState(intialState)
+        await Client.post('/:game_id', updatedState)
+        setReviewState(updatedState)
         GetReviews()
         handleGames()
         navigate('/games')
@@ -56,6 +57,7 @@ const Review = ({ handleGames, game, user}) => {
                     className="newReview"
                     name="newReview" 
                     id="newReview" 
+                    placeholder="add new review"
                     cols="25"
                     rows="5"
                     onChange={handleChange}

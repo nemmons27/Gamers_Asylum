@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetGame } from "../services/GameServices";
 import Review from "../components/Review";
+import { useNavigate } from "react-router-dom";
 
 const GameDetail = ({user, handleGames}) => {
     let { id } = useParams()
     const [game, setGame] = useState({})
+
+    let navigate = useNavigate()
 
     useEffect(() => {
         const handleGame = async () => {
@@ -24,9 +27,7 @@ const GameDetail = ({user, handleGames}) => {
                 <p>{game.genre}</p>
                 <p>{game.description}</p>
                 <br />
-                <p>Reviews :
-                    <Review  game={game} user={user}/>
-                </p>
+                <Review  game={game} user={user}/>
             </div>
         </div>
     ) : (
