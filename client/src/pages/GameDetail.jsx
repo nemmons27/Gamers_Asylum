@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetGame } from "../services/GameServices";
 import { Link } from "react-router-dom"
+import Review from "../components/Review";
 
 const GameDetail = ({user, games, handleGames}) => {
     let { id } = useParams()
@@ -23,6 +24,7 @@ console.log(game)
                 <h4>{game.name}</h4>
                 <p>{game.genre}</p>
                 <p>{game.description}</p>
+                <p>Reviews : <Review /></p>
             </div>
         </div>
     )

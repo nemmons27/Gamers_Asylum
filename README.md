@@ -119,11 +119,11 @@ Thats what the ***Gamers Asylum*** is here for. In the Asylum, We leave *reviews
     - [X] Protect all paths if the user isn't logged in
     - [X] Connection Check for Login and Register
 - **FRIDAY**
-    - []
-    - []
-    - []
-    - []
-    - []
+    - [X] Fix Game Cover to render on Details
+    - [X] Fix submit button on Add Game 
+    - [X] Create footer for website
+    - [] Build Reviews out in Details
+    - [] 
     - []
     - []
 - **SATURDAY**

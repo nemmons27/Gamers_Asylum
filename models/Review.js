@@ -10,10 +10,6 @@ const reviewSchema = new Schema(
         id: {type: String},
         date: {type: String },
         body: {type: String},
-        comment: {
-            type: Schema.Types.String,
-            ref: "Comment",
-        }
     }
 )
 
