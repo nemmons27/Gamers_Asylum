@@ -25,7 +25,7 @@ const GameDetail = ({user, handleGames}) => {
                 <p>{game.description}</p>
                 <br />
                 <p>Reviews :
-                    <Review  game={game} gameId={game._id} user={user} handleGames={handleGames}/>
+                    <Review  game={game} user={user}/>
                 </p>
             </div>
         </div>

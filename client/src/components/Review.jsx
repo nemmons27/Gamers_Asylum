@@ -1,18 +1,23 @@
 import { useState } from "react";
 import Client from "../services/api";
-import { Link } from "react-router-dom";
 
-const Review = () => {
+const Review = ({ handleGames, game, user}) => {
     const intialState= {
-        newReview: 'Add a Review'
+        review: 'Add a Review'
     }
 
     const [reviewState, setReviewState] = useState(intialState)
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await Client.post('/reviews', reviewState)
+        let updatedState = {
+            ...reviewState,
+            user: user.id
+        }
+        console.log(updatedState)
+        await Client.post('/reviews', updatedState)
         setReviewState(intialState)
+        handleGames()
     }
 
     const handleChange = (e) =>{
