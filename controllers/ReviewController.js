@@ -18,6 +18,16 @@ const CreateReview = async (req,res) => {
     }
 }
 
+const UpdateReview = async (req,res) => {
+    try{
+        const review = await Review.findByIdAndUpdate(req.params.game_id, req.body, {new: true})
+        res.send(review)
+    } catch (error) {
+        throw error
+    }
+}
+
+
 const DeleteReview = async (req,res) => {
     try {
         await Review.deleteOne({ _id :
@@ -32,5 +42,6 @@ const DeleteReview = async (req,res) => {
 module.exports = {
     GetReview,
     CreateReview,
+    UpdateReview,
     DeleteReview
 }

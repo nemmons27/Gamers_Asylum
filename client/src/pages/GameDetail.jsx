@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { GetGame } from "../services/GameServices";
 import Review from "../components/Review";
 
-const GameDetail = ({user, games, handleGames}) => {
+const GameDetail = ({user, handleGames}) => {
     let { id } = useParams()
     const [game, setGame] = useState({})
 
@@ -16,7 +16,7 @@ const GameDetail = ({user, games, handleGames}) => {
         handleGame()
     }, [])
 
-    return (
+    return user ? (
         <div className="details">
             <div className="details-header">
                 <img src={game.image} alt="gameImg" className="gameImage"/>
@@ -25,8 +25,14 @@ const GameDetail = ({user, games, handleGames}) => {
                 <p>{game.description}</p>
                 <br />
                 <p>Reviews :
-                    <Review  game={game} gameId={game._id} user={user} handleGames={handleGames}/></p>
+                    <Review  game={game} gameId={game._id} user={user} handleGames={handleGames}/>
+                </p>
             </div>
+        </div>
+    ) : (
+        <div className='guard'>
+            <h4>Log in to see more! </h4>
+            <button className='button' onClick={() => navigate('/login')}>Log In</button>
         </div>
     )
 }
