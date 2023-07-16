@@ -17,3 +17,21 @@ export const GetGame = async (id) => {
         throw error
     }
 }
+
+export const GetReviews = async () => {
+    try{
+        const res = await Client.get('/reviews')
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
+
+export const GetReview = async (id) => {
+    try {
+        const res = await Client.get('/reviews/${id}')
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
