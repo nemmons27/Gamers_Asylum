@@ -2,9 +2,8 @@ import { useState, useEffect } from "react";
 import Client from "../services/api";
 import { GetReviews } from '../services/GameServices'
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
-const Review = ({ handleGames, games, game, user}) => {
+const Review = ({ handleGames, game, user}) => {
     const intialState= {
         review: ''
     }
@@ -20,11 +19,10 @@ const Review = ({ handleGames, games, game, user}) => {
             user: user.id,
         }
         console.log(updatedState)
-        await Client.post('/:game_id', updatedState)
+        await Client.post('/reviews/${game_id}', updatedState)
         setReviewState(updatedState)
         GetReviews()
         handleGames()
-        navigate('/games')
     }
 
     const handleChange = (e) =>{
@@ -32,34 +30,18 @@ const Review = ({ handleGames, games, game, user}) => {
     }
 
     return (
-        <div className="grid col=3">
-            <table className="reviewTable">
-                <thead className="reviewHead">
-                    <tr>
-                        <th>User:</th>
-                        <th>Date:</th>
-                        <th>Review:</th>
-                    </tr>
-                </thead>
-
-                <tbody className="reviewBody">
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+            <div>
             <br />
             <form onSubmit={handleSubmit}>
                 <textarea 
                     className="newReview"
-                    name="newReview" 
-                    id="newReview" 
+                    name="review" 
+                    id="review" 
                     placeholder="add new review"
                     cols="25"
                     rows="5"
                     onChange={handleChange}
+                    value={reviewState.review}
                 ></textarea>
                 <br />
                 <button className="button" type="submit">Add Review?</button>
