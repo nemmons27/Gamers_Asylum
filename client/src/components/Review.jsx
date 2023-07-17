@@ -14,6 +14,7 @@ const Review = ({ handleGames, game, user}) => {
         let updatedState = {
             ...reviewState,
             user: user.id,
+            userName: user.name
         }
         await Client.post(`/reviews/${game._id}`, updatedState)
         setReviewState(intialState)
