@@ -31,6 +31,12 @@ body {
   margin: 2vmin;
 }
 
+.navLogo {
+  width: 4%;
+  height: 4%;
+  
+}
+
 a {
   margin: 1vmin;
   color: antiquewhite;

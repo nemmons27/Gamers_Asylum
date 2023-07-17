@@ -3,17 +3,19 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GetGame } from "../services/GameServices";
 import Review from "../components/Review";
+import ReviewRender from "../components/ReviewRender"
 import { useNavigate } from "react-router-dom";
 
-const GameDetail = ({user, handleGames}) => {
-    let { id } = useParams()
+const GameDetail = ({ user, handleGames }) => {
+    const { game_id } = useParams()
     const [game, setGame] = useState({})
 
     let navigate = useNavigate()
 
     useEffect(() => {
         const handleGame = async () => {
-            const data = await GetGame(id)
+            const data = await GetGame(game_id)
+            console.log(data)
             setGame(data)
         }
         handleGame()
@@ -21,13 +23,18 @@ const GameDetail = ({user, handleGames}) => {
 
     return user ? (
         <div className="details">
-            <div className="details-header">
-                <img src={game.image} alt="gameImg" className="gameImage"/>
+            <div className="details-header" >
+                <img src={game.image} alt="gameImg" className="gameImage" />
                 <h4>{game.name}</h4>
                 <p>{game.genre}</p>
                 <p>{game.description}</p>
                 <br />
-                <Review  game={game} user={user}/>
+                <Review game={game} user={user} handleGames={handleGames} />
+                {!!game.reviews && game.reviews.map((review, idx) => (
+                <div key={idx}>
+                    <ReviewRender game={game} user={user} review={review} handleGames={handleGames} />
+                </div>
+                ))}
             </div>
         </div>
     ) : (

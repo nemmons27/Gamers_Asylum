@@ -2,7 +2,7 @@ const {Game} = require('../models')
 
 const GetGames = async (req,res) => {
     try {
-        const game = await Game.find({})
+        const game = await Game.find({}).populate('reviews')
         res.send(game)
     } catch (error) {
         throw error
@@ -11,7 +11,7 @@ const GetGames = async (req,res) => {
 
 const GetGameById = async (req,res) => {
     try{
-        const game = await Game.findById(req.params.id)
+        const game = await Game.findById(req.params.id).populate('reviews')
         res.send(game)
     } catch (error) {
         throw error
@@ -20,7 +20,8 @@ const GetGameById = async (req,res) => {
 
 const CreateGame = async (req,res) => {
     try {
-        const game = await Game.create({...req.body })
+        const game = await Game.create(req.body)
+        console.log(game)
         res.send(game)
     } catch (error) {
         throw error

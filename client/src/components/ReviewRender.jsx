@@ -1,21 +1,21 @@
-import { get } from 'mongoose'
 import React from 'react'
 import Client from '../services/api'
 import { useParams, useNavigate } from 'react-router-dom'
 
 
-const ReviewRender = ({ review, handleGames }) => {
+const ReviewRender = ({ review, handleGames, user,  }) => {
     let { reviewId } = useParams()
+    console.log(review)
     let navigate = useNavigate()
 
-    const getDate = () => {
-        const formattedDate = new Date(review.createdAt).toDateString()
-        return formattedDate
-    }
+    // const getDate = () => {
+    //     const formattedDate = new Date(review.createdAt).toDateString()
+    //     return formattedDate
+    // }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await Client.delete('/reviews/${reviewId}')
+        await Client.delete(`/reviews/${reviewId}`)
         handleGames()
         navigate('/games')
     }
@@ -25,12 +25,14 @@ const ReviewRender = ({ review, handleGames }) => {
         <div className="grid col=3">
             <br />
                 <form onSubmit={handleSubmit}>
-                    <div className='tD'>{getDate()}</div>
+                    <div className='tD'>{}</div>
                     <div className='tD'>{review.user}</div>
-                    <div className='tD'>{review.body}</div>
+                    <div className='tD'>{review.review}</div>
                     <button className='removebtn' type="submit">X</button>
                 </form>
 
         </div>
     )
 }
+
+export default ReviewRender

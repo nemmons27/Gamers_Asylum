@@ -10,7 +10,10 @@ const gameSchema = new Schema(
             maxItems: 3
         },
         description: { type: String, required: true },
-        id: { type: String }
+        reviews: [{ 
+            type: Schema.Types.ObjectId,
+            ref: 'Review'
+        }]
     },
     { timestamps: true }
 )

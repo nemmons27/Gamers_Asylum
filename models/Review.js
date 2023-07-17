@@ -7,9 +7,8 @@ const reviewSchema = new Schema(
             ref: "User",
             required: true
         },
-        id: {type: String},
         date: {type: String },
-        body: {type: String},
+        review: {type: String},
     }
 )
 

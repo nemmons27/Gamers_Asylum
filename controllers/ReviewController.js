@@ -1,3 +1,4 @@
+const {Game} = require('../models')
 const {Review} = require('../models')
 
 const GetReview = async (req,res) => {
@@ -11,8 +12,11 @@ const GetReview = async (req,res) => {
 
 const CreateReview = async (req,res) => {
     try {
-        const review = await Review.create({...req.body })
-        res.send(review)
+        const review = await Review.create(req.body)
+        const game = await Game.findById(req.params.game_id)
+        game.reviews.push(review._id)
+        await game.save()
+        res.status(201).send({msg: 'review sent', status: 'review', game, review})
     } catch (error) {
         throw error
     }

@@ -12,6 +12,7 @@ export const GetGames = async () => {
 export const GetGame = async (id) => {
     try{
         const res = await Client.get(`/games/${id}`)
+        console.log(res.data)
         return res.data
     } catch (error) {
         throw error

@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Client from "../services/api";
 import { GetReviews } from '../services/GameServices'
-import { useNavigate } from "react-router-dom";
 
 const Review = ({ handleGames, game, user}) => {
     const intialState= {
@@ -10,23 +9,21 @@ const Review = ({ handleGames, game, user}) => {
 
     const [reviewState, setReviewState] = useState(intialState)
 
-    let navigate = useNavigate()
-
     const handleSubmit = async (e) => {
         e.preventDefault()
         let updatedState = {
             ...reviewState,
             user: user.id,
         }
-        console.log(updatedState)
-        await Client.post('/reviews/${game_id}', updatedState)
-        setReviewState(updatedState)
+        await Client.post(`/reviews/${game._id}`, updatedState)
+        setReviewState(intialState)
         GetReviews()
         handleGames()
     }
 
     const handleChange = (e) =>{
         setReviewState({...reviewState, [e.target.id]: e.target.value})
+        console.log(reviewState)
     }
 
     return (
