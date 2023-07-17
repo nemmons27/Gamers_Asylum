@@ -6,6 +6,7 @@ const Nav = ({user, handleLogOut}) => {
     if (user) {
         unlimited = (
             <nav>
+                <img src="/images/Gamer's_Asylum_logo" alt='Logo here'></img>
                 <Link to="/games">Main Library</Link>
                 <Link to="/new">Add Game</Link>
                 <Link to="/about">About</Link>
@@ -16,7 +17,7 @@ const Nav = ({user, handleLogOut}) => {
 
     const limited = (
         <nav>
-            <Link to="/">Gamer's Asylum</Link>
+            <Link to="/">Gamer's Asylum</Link><img src="/images/Gamer's_Asylum_logo" alt='Logo here'></img>
             <Link to="/about">About</Link>
             <Link to="/register">Register</Link>
             <Link to="/login">Log In</Link>

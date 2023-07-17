@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Client from "../services/api";
 import { GetReviews } from '../services/GameServices'
-import { GetGames } from '../services/GameServices'
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
