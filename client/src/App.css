@@ -3,15 +3,18 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-body{
+body {
   background-color: cadetblue;
   color: antiquewhite;
+  padding: 50px;
+  margin: 0;
+  padding: 4vmin 4vmin 4vmin 4vmin;
 }
 
-.nav{
+.nav {
   margin: 1vmin;
   display: flex;
   flex-direction: row;
@@ -19,26 +22,54 @@ body{
   border: 2px solid antiquewhite;
 }
 
-.navLine{
+.navLine {
   display: inline;
 }
 
-.navLink{
+.navLink {
   display: inline;
   margin: 2vmin;
 }
+
 a {
   margin: 1vmin;
   color: antiquewhite;
 }
+
 a:hover {
   color: lightcyan;
 }
+
 .card {
   padding: 4vmin;
   border: 2px solid antiquewhite;
 }
 
+button {
+  display: inline-block;
+  background: white;
+  color: #333;
+  min-width: 70px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.reviewTable {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.gameImage {
+  width: 75%;
+  height: 75%;
+}
 /* .read-the-docs {
   color: #888;
 } */
