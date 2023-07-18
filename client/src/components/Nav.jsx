@@ -6,7 +6,7 @@ const Nav = ({user, handleLogOut}) => {
     if (user) {
         unlimited = (
             <nav>
-                <img src='/images/Gamers_Asylum_logo' alt='Logo here' className='navLogo'></img>
+                {/* <img src='/images/Gamers_Asylum_logo' alt='Logo here' className='navLogo'></img> */}
                 <Link to="/games">Main Library</Link>
                 <Link to="/new">Add Game</Link>
                 <Link to="/about">About</Link>
@@ -17,7 +17,7 @@ const Nav = ({user, handleLogOut}) => {
 
     const limited = (
         <nav>
-            <img src="/images/Gamer's_Asylum_logo" alt='Logo here' className='navLogo'></img>
+            {/* <img src='/images/Gamers_Asylum_logo' alt='Logo here' className='navLogo'></img> */}
             <Link to="/">Gamer's Asylum</Link>
             <Link to="/about">About</Link>
             <Link to="/register">Register</Link>

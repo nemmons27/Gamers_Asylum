@@ -32,8 +32,8 @@ body {
 }
 
 .navLogo {
-  width: 4%;
-  height: 4%;
+  width: 17%;
+  height: 17%;
   
 }
 
@@ -75,6 +75,11 @@ button {
 .gameImage {
   width: 75%;
   height: 75%;
+}
+
+.coverPreview {
+  width: 45%;
+  height: 43%;
 }
 /* .read-the-docs {
   color: #888;

@@ -5,7 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 
 const ReviewRender = ({ review, handleGames }) => {
     let { reviewId } = useParams()
-    console.log(review)
+
     let navigate = useNavigate()
 
     const getDate = () => {
@@ -27,7 +27,7 @@ const ReviewRender = ({ review, handleGames }) => {
                 <form onSubmit={handleSubmit}>
                     <div className='tD'>{getDate()}</div>
                     <div className='tD'>{review.userName}</div>
-                    <div className='tD'>{review.review}</div>
+                    <div className='tD'>{!!review.review && review.review}</div>
                     <button className='removebtn' type="submit">X</button>
                 </form>
 

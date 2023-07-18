@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Client from "../services/api";
 import { GetReviews } from '../services/GameServices'
 
-const Review = ({ handleGames, game, user}) => {
+const Review = ({ handleGames, gameId, user}) => {
     const intialState= {
         review: ''
     }
@@ -16,7 +16,7 @@ const Review = ({ handleGames, game, user}) => {
             user: user.id,
             userName: user.name
         }
-        await Client.post(`/reviews/${game._id}`, updatedState)
+        await Client.post(`/reviews/${gameId}`, updatedState)
         setReviewState(intialState)
         GetReviews()
         handleGames()
