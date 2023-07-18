@@ -6,9 +6,9 @@ import Review from "../components/Review";
 import ReviewRender from "../components/ReviewRender"
 import { useNavigate } from "react-router-dom";
 
-const GameDetail = ({ user, games, review_id }) => {
+const GameDetail = ({ user, handleGames }) => {
     const { game_id } = useParams()
-    const [game, setGame, review,setReview] = useState({})
+    const [game, setGame] = useState({})
 
     let navigate = useNavigate()
 
@@ -18,15 +18,7 @@ const GameDetail = ({ user, games, review_id }) => {
             setGame(data)
         }
         handleGame()
-    }, [games])
-
-    useEffect(() => {
-        const handleReview = async () => {
-            const data = await GetReview(review_id)
-            setReview(data)
-        }
-        handleReview()
-    }, [review])
+    }, [])
 
     return user ? (
         <div className="details">
@@ -39,10 +31,10 @@ const GameDetail = ({ user, games, review_id }) => {
             <br />
             <div className="reviewCard">
                 <p>Reviews:</p>
+                <Review user={user} game={game} handleGames={handleGames}  />
                 {!!game.reviews && game.reviews.map((review) => (
-                    <ReviewRender user={user} review={review} reviewId={review.id} DeleteReview={DeleteReview} />
-                ))}
-                    <Review user={user} games={games} review={review} />
+                    <ReviewRender game={game} user={user} review={review} DeleteReview={DeleteReview} />
+                    ))}
                     <br />
                     <button className="removebtn" type="submit">X</button>
             </div>

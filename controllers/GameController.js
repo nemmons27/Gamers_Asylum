@@ -48,8 +48,8 @@ const DeleteGame = async (req,res) => {
 
 module.exports = {
     GetGames,
+    GetGameById,
     CreateGame,
     UpdateGame,
-    DeleteGame,
-    GetGameById
+    DeleteGame
 }
