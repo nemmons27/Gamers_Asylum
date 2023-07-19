@@ -19,6 +19,22 @@ export const GetGame = async (id) => {
     }
 }
 
+export const UpdateGame = async (id) => {
+    try {
+        const res = await Client.put(`/games/${id}`)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
+export const DeleteGame = async (id) => {
+    try {
+        const res = await Client.delete(`/games/${id}`)
+        return res.data
+    } catch (error) {
+        throw error
+    }
+}
 export const GetReviews = async () => {
     try{
         const res = await Client.get('/reviews')

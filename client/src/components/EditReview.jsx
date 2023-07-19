@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Client from "../services/api";
-import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { GetGame } from "../services/GameServices";
+import { GetReview } from "../services/GameServices";
 
-const EditReview = ({ user, gmaes }) => {
+const EditReview = ({ user, games }) => {
     let { gameId } = useParams()
     let navigate = useNavigate()
-    const [game, setGame] = useState()
+    const [reviewState, setReviewState] = useState('')
 
     const [formState, setFormState] = useState({
         name: '',
@@ -18,16 +17,16 @@ const EditReview = ({ user, gmaes }) => {
     console.log(gameId)
 
     useEffect(() => {
-        const handleGame = async () => {
-            const data = await GetGame(gameId)
-            setFormState(data)
+        const handleReview = async () => {
+            const data = await GetReview(reviewId)
+            setReviewState(data)
         }
-        handleGame()
+        handleReview()
     }, [])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await Client.put(`/games/${gameId}`, formState)
+        await Client.put(`/review/${reviewId}`, formState)
         navigate(`/games/${gameId}`)
     }
 
@@ -39,7 +38,7 @@ const EditReview = ({ user, gmaes }) => {
         <div>
             <h4 htmlFor="editReview" value={formState.name}>Edit {formState.name}</h4>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="description">Review:</label>
+                <label htmlFor="">Review:</label>
                 <textarea 
                 type="textarea"
                 id="review"

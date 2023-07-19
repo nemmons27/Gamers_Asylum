@@ -24,8 +24,8 @@ const ReviewRender = ({ review, handleGames }) => {
             <br />
             <div className='review'>
                     {/* <td className='tD'>{getDate()}</td> */}
-                    <div className='tD'>{review.user}</div>
-                    <div className='tD'>{review.review}</div>
+                    <div className='tD'>yeah</div>
+                    <div className='tD'>mhm</div>
                 <form onSubmit={handleSubmit}>
                     <button className='editbtn' to={`/games/reviews/${review._id}`}> Edit Review</button>
                     <br />
