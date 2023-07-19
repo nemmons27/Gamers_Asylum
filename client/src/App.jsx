@@ -12,6 +12,8 @@ import { CheckSession } from './services/Auth'
 import './App.css'
 import { set } from 'mongoose'
 import { GetGames } from './services/GameServices'
+import EditGame from './components/EditGame'
+import { EditGame } from './components/EditGame'
 
 
 function App() {
@@ -59,6 +61,7 @@ function App() {
           <Route path="/login" element={<LogIn setUser={setUser} />} />
           <Route path="/games" element={<Games user={user}/>}  />
           <Route path="/games/:game_id" element={<GameDetail user={user} games={games} handleGames={handleGames}/>}/>
+          <Route path='/games/:game_id' element={<EditGame user={user} games={games} EditGame={EditGame} handleGames={handleGames} />}  />
           <Route path="/new" element={<NewGame user={user}/>} />
           <Route path="/about" element={<About />} />
         </Routes>
