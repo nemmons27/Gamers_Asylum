@@ -36,8 +36,7 @@ const GameDetail = ({ user, handleGames }) => {
                     <ReviewRender game={game} user={user} review={review} DeleteReview={DeleteReview} />
                     ))}
                     <br />
-                    <button className="removebtn" type="submit">X</button>
-            </div>
+                    </div>
         </div>
     ) : (
         <div className='guard'>

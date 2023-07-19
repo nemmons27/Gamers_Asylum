@@ -3,7 +3,7 @@ import Client from '../services/api'
 import { useNavigate } from 'react-router-dom'
 
 
-const ReviewRender = ({ review, handleGames,}) => {
+const ReviewRender = ({ review, handleGames }) => {
 
     let navigate = useNavigate()
 
