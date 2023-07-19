@@ -1,10 +1,9 @@
 import React from 'react'
 import Client from '../services/api'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 
 const ReviewRender = ({ review, handleGames,}) => {
-    let { reviewId } = useParams()
 
     let navigate = useNavigate()
 
@@ -23,12 +22,15 @@ const ReviewRender = ({ review, handleGames,}) => {
     return (
         <div className="grid col=3">
             <br />
-            <div className='reviewTable'>
+            <div className='review'>
                     {/* <td className='tD'>{getDate()}</td> */}
                     <div className='tD'>{review.user}</div>
                     <div className='tD'>{review.review}</div>
                 <form onSubmit={handleSubmit}>
-                    <button className='removebtn' type="submit"  >X</button>
+                    <button className='editbtn' to={`/games/reviews/${review._id}`}> Edit Review</button>
+                    <br />
+                    <br />
+                    <button className='removebtn' type="submit" onClick={handleGames} >X</button>
                 </form>
             </div>
         </div>
