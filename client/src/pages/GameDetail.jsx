@@ -33,7 +33,7 @@ const GameDetail = ({ user, handleGames }) => {
                 <p>Reviews:</p>
                 <Review user={user} game={game} handleGames={handleGames}  />
                 {!!game.reviews && game.reviews.map((review) => (
-                    <ReviewRender game={game} user={user} review={review} DeleteReview={DeleteReview} />
+                    <ReviewRender game={game} user={user} review={review} handleGames={handleGames} DeleteReview={DeleteReview} />
                     ))}
                     <br />
                     </div>
